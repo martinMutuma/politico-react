@@ -23,7 +23,7 @@ class Signup extends Component {
 
     axios
       .post(url, data)
-      .then(function(response) {
+      .then(response => {
         if (response.data != null) {
           data = response.data.data;
           sessionStorage.setItem("token", data.token);

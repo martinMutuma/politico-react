@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { withAlert } from "react-alert";
+
 export function isLoggedin() {
   const token = sessionStorage.getItem("token");
   let isLoggedin = false;
@@ -8,7 +10,6 @@ export function isLoggedin() {
   }
   return isLoggedin;
 }
-import { withAlert } from "react-alert";
 const PrivateRoute = ({ component: Component, ...rest }) => {
   isLoggedin() ? `` : rest.alert.info("Kindly login to access " + rest.path);
   return (
