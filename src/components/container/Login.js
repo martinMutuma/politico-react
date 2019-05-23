@@ -3,7 +3,6 @@ import { mainUrl } from "../../utils/MakeRequest";
 import axios from "axios";
 import { withRouter } from "react-router-dom";
 import { withAlert } from "react-alert";
-
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +17,7 @@ class Login extends Component {
     event.preventDefault();
     let url = mainUrl + "auth/login";
 
-    this.props.alert.info("Logging in..........");
+    // this.props.alert.info("Logging in..........");
     axios
       .post(url, this.state)
       .then(response => {
@@ -45,11 +44,10 @@ class Login extends Component {
     this.setState({
       [event.target.id]: event.target.value
     });
-    console.log("Typing.........");
   }
   render() {
     return (
-      <div>
+      <div data-test="c-login">
         <div className="container">
           <div className="card login-card">
             <div className="card-header">
@@ -104,5 +102,7 @@ class Login extends Component {
     );
   }
 }
+const mapStateToProps = (state, ownProps) => {};
+const mapDispatchToProps = {};
 
-export default withAlert()(withRouter(Login));
+export default withRouter(withAlert()(Login));

@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <Provider template={AlertTemplate} {...options}>
-        <div className="">
+        <div className="" data-test="c-app">
           <Routing />
         </div>
       </Provider>
