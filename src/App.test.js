@@ -11,7 +11,6 @@ test("renders without crashing", () => {
     </Provider>
   );
   expect(wrapper).toBeTruthy();
-  console.log(wrapper);
   const appC = wrapper.find('[data-test="c-app"]');
   expect(appC.length).toBe(1);
 });
