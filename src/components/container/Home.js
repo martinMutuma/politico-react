@@ -7,7 +7,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <div className="content">
+      <div className="content" data-test="c-home">
         <div className="bg-image">
           <span>
             We count every vote <br />
