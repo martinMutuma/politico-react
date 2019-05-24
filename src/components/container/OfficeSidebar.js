@@ -19,7 +19,7 @@ class OfficeSidebar extends Component {
   }
   render() {
     return (
-      <div className="card bg-sucess-light">
+      <div className="card bg-sucess-light" data-test="c-office-sidebar">
         <div className="card-body">
           <div className="sidebar bg-light front-sidebar" id="offices-sidebar">
             <a href="#" id="all-candidates-link">

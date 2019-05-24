@@ -44,7 +44,7 @@ class Signup extends Component {
   render() {
     return (
       <div>
-        <div className="container">
+        <div className="container" data-test="c-signup">
           <div className="container signup">
             <div className="flex-row">
               <div className="card signup-side">
